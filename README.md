@@ -12,6 +12,17 @@
 
 ======
 
+## 09-09-2018 September Update
+* New colour controls and UI options have been implemented to easily create brand new themes
+* New application named `Palette Editor` has been implemented to create new themes (89% completed) - feedback would be welcome
+* New debugging options
+* A new circular picture box
+* New API to allow a complementary colour set to be generated.
+* New project icon
+* Tidy up code
+
+======
+
 ## 2018-07-08 Initial Commit
 * Reset build paths, so no errors should be incurred.
 * One **new** theme called `Slate Silver`, stylised for the 2007/2010 and 2013 theme sets.
