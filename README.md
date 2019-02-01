@@ -1,14 +1,22 @@
-# Krypton-Toolkit-Suite-Extended-NET-4.72
-
-=======
-
-## Help needed! If anyone knows how to generate colours based on a base colour, then please contribute to this project, as it'll be appreciated (4 colours are needed). Thanks!
+# <img src="https://raw.githubusercontent.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.472/master/Assets/PNG/64%20x%2064/KR%2064%20%20x%2064%20Orange.png" /> Toolkit Suite Extended .NET 5.472
 
 =======
 
 ## An extension to the Krypton Toolkit suite of controls for .NET framework 4.7.2
 
 ## NOTE: 08/07/2018 Background menu colours will be implemented in the comming weeks. Stay tuned for updates!
+
+======
+
+# Building this repository from code
+
+## In order to compile the code, you MUST restore/update the NuGet packages in order to build successfully!
+
+======
+
+## 01-02-2019 Build 700 & Code parity with **5.470**
+* All changes since September 2018
+* New NuGet package, build 700 (build date Friday 1st, February 2019) is now available
 
 ======
 

@@ -1,7 +1,15 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
+using Core.Classes.Other;
+using Core.UX;
+using Core.UX.Colours;
+using Core.UX.Options;
 using ExtendedControls.Enumerations;
+using ExtendedControls.ExtendedToolkit.MessageBoxes.UI;
+using ExtendedControls.ExtendedToolkit.UI.Dialogues;
+using ExtendedControls.ExtendedToolkit.UI.Drawing;
 using KryptonApplicationUpdater.Classes.SettingsManager;
-using KryptonApplicationUpdater.Interfaces;
+//using KryptonApplicationUpdater.Interfaces;
+
 using KryptonExtendedToolkit.Base.Code;
 using System;
 using System.Diagnostics;
@@ -10,12 +18,10 @@ using System.Drawing.Drawing2D;
 using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
-using Tooling.Classes.Other;
-using Tooling.UX;
 
 namespace Playground
 {
-    public partial class Form1 : KryptonForm, IUpdatable
+    public partial class Form1 : KryptonForm/*, IUpdatable <- Commented this out to allow the designers to work correctly*/
     {
         private UtilityMethods utilityMethods = new UtilityMethods();
         private InternalApplicationUpdaterSettingsManager internalApplicationUpdaterSettingsManager = new InternalApplicationUpdaterSettingsManager();
@@ -36,7 +42,7 @@ namespace Playground
         public string ApplicationName { get { return "Playground"; } set { } }
         public string CurrentApplicationVersion { get { return currentVersion.ToString(); } set { } }
         public string ApplicationIdentification { get { return "Playground"; } set { } }
-        Form IUpdatable.ParentForm { get { return this; } set { } }
+        //Form IUpdatable.ParentForm { get { return this; } set { } }
         #endregion
 
         private void Form1_Load(object sender, EventArgs e)
@@ -50,12 +56,12 @@ namespace Playground
                 internalApplicationUpdaterSettingsManager.SetXMLFileURL(ServerXMLFileURL);
             }
 
-            if (utilityMethods.GetHasElevateProcessWithAdministrativeRights())
+            if (UtilityMethods.GetHasElevateProcessWithAdministrativeRights())
             {
                 Text = Text + " (Administrator)";
             }
 
-            klblAdminMode.Text = $"Is running in Administrator mode: { utilityMethods.GetHasElevateProcessWithAdministrativeRights().ToString() }";
+            klblAdminMode.Text = $"Is running in Administrator mode: { UtilityMethods.GetHasElevateProcessWithAdministrativeRights().ToString() }";
 
             //kctb1.CueText = "Hello";
 
@@ -146,21 +152,21 @@ namespace Playground
 
         private void saveAsToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            SaveFileDialog saveFileDialog = new SaveFileDialog();
-
-            saveFileDialog.Title = "Save file as:";
-
-            saveFileDialog.Filter = "Normal Text Files (*.txt)|*.txt";
-
-            saveFileDialog.InitialDirectory = Environment.CurrentDirectory;
-
-            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            using (SaveFileDialog saveFileDialog = new SaveFileDialog
             {
-                StreamWriter writer = new StreamWriter(saveFileDialog.FileName);
+                Title = "Save file as:",
+                Filter = "Normal Text Files (*.txt)|*.txt",
+                InitialDirectory = Environment.CurrentDirectory
+            })
+            {
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    StreamWriter writer = new StreamWriter(saveFileDialog.FileName);
 
-                writer.Write(krtbEditor.Text);
+                    writer.Write(krtbEditor.Text);
 
-                mostRecentlyUsedFileManager.AddRecentFile(Path.GetFullPath(saveFileDialog.FileName));
+                    mostRecentlyUsedFileManager.AddRecentFile(Path.GetFullPath(saveFileDialog.FileName));
+                }
             }
         }
 
@@ -298,14 +304,118 @@ namespace Playground
 
         private void kbtnMessageboxTest_Click(object sender, EventArgs e)
         {
-
+            KryptonMessageBox.Show(this, @"Test KryptonMessagebox", @"Check Title Text Size", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            ExtendedKryptonMessageBox.Show(this, @"Test ExtendedKryptonMessageBox Default 12", @"Check Title Text Size", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            ExtendedKryptonMessageBox.Show(this, @"Test ExtendedKryptonMessageBox specified 20", @"Check Title Text Size", MessageBoxButtons.OK, MessageBoxIcon.Information, messageboxTypeface: new Font(@"Tahoma", 20F));
         }
 
         private void kbtnPaletteEditor_Click(object sender, EventArgs e)
         {
-            PaletteEditor.UX.MainWindow _paletteEditor = new PaletteEditor.UX.MainWindow();
+            KryptonMessageBox.Show(this,
+                @"Once PaletteEditor is building again, then add to references and then this code can be uncommented!");
+            //PaletteEditor.UX.MainWindow _paletteEditor = new PaletteEditor.UX.MainWindow();
 
-            _paletteEditor.Show();
+            //_paletteEditor.Show();
+        }
+
+        private void kryptonButton3_Click(object sender, EventArgs e)
+        {
+            TypefaceSelectionDialogue typefaceSelectionDialogue = new TypefaceSelectionDialogue();
+
+            typefaceSelectionDialogue.Show();
+        }
+
+        private void kryptonButton4_Click(object sender, EventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+
+            mainWindow.Show();
+        }
+
+        private void kuacsbElevate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kryptonButton5_Click(object sender, EventArgs e)
+        {
+            Scrollbars scrollbars = new Scrollbars();
+
+            scrollbars.Show();
+        }
+
+        private void kryptonButton7_Click(object sender, EventArgs e)
+        {
+            KryptonColourChooser1 kryptonColourChooser1 = new KryptonColourChooser1();
+
+            kryptonColourChooser1.Show();
+        }
+
+        private void kryptonButton6_Click(object sender, EventArgs e)
+        {
+            KryptonColourChooser2 kryptonColourChooser2 = new KryptonColourChooser2();
+
+            kryptonColourChooser2.Show();
+        }
+
+        private void kryptonButton8_Click(object sender, EventArgs e)
+        {
+            SettingsManagementOptions settingsManagementOptions = new SettingsManagementOptions();
+
+            settingsManagementOptions.Show();
+        }
+
+        private void kryptonButton9_Click(object sender, EventArgs e)
+        {
+            ThemeOptions themeOptions = new ThemeOptions();
+
+            themeOptions.Show();
+        }
+
+        private void kryptonButton10_Click(object sender, EventArgs e)
+        {
+            GlobalOptionsMenu globalOptionsMenu = new GlobalOptionsMenu();
+
+            globalOptionsMenu.Show();
+        }
+
+        private void kryptonButton11_Click(object sender, EventArgs e)
+        {
+            HexadecimalToRGBConverter hexadecimalToRGBConverter = new HexadecimalToRGBConverter();
+
+            hexadecimalToRGBConverter.Show();
+        }
+
+        private void kryptonCommandLinkButton2_Click(object sender, EventArgs e)
+        {
+            using (CommandLinkStyles cls = new CommandLinkStyles())
+            {
+                cls.ShowDialog(this);
+            }
+        }
+
+        private void kryptonCheckBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kryptonButton12_Click(object sender, EventArgs e)
+        {
+            WizardTest wt = new WizardTest();
+
+            wt.Show();
+        }
+
+        private void kryptonButton13_Click(object sender, EventArgs e)
+        {
+            MoreControls mc = new MoreControls();
+
+            mc.Show();
         }
     }
 }

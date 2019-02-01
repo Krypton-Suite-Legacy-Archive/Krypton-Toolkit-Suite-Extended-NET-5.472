@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Tooling.Settings {
+namespace Core.Settings {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
@@ -44,6 +44,18 @@ namespace Tooling.Settings {
             }
             set {
                 this["FeedbackText"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string PaletteExportPath {
+            get {
+                return ((string)(this["PaletteExportPath"]));
+            }
+            set {
+                this["PaletteExportPath"] = value;
             }
         }
     }

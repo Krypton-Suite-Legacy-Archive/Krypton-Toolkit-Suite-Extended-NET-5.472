@@ -12,6 +12,7 @@
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ApplicationVersion>4.7.405.0</ApplicationVersion>
+    <AssemblyVersion>5.472.526.0</AssemblyVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -36,12 +37,6 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Krypton Design">
-      <HintPath>..\..\Required\Krypton Design.dll</HintPath>
-    </Reference>
-    <Reference Include="Krypton Toolkit">
-      <HintPath>..\..\Required\Krypton Toolkit.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -361,6 +356,10 @@
     <None Include="Resources\18520 - agt stop.png" />
     <None Include="Resources\17871 - apply check clean clear correct ok ready valid yes.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <PackageReference Include="KryptonToolkitSuite5472">
+      <Version>5.472.717</Version>
+    </PackageReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

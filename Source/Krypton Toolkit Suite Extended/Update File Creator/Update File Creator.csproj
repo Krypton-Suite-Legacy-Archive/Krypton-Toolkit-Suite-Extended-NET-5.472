@@ -11,6 +11,7 @@
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <AssemblyVersion>5.472.421.0</AssemblyVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -37,12 +38,6 @@
     <ApplicationIcon>Resources\Oxygen-Icons.org-Oxygen-Mimetypes-text-xml.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Krypton Navigator">
-      <HintPath>..\..\Required\Krypton Navigator.dll</HintPath>
-    </Reference>
-    <Reference Include="Krypton Toolkit">
-      <HintPath>..\..\Required\Krypton Toolkit.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -115,10 +110,13 @@
       <Version>1.6.1</Version>
     </PackageReference>
     <PackageReference Include="EasyScintilla">
-      <Version>1.0.4</Version>
+      <Version>1.0.5</Version>
     </PackageReference>
     <PackageReference Include="jacobslusser.ScintillaNET.Signed">
       <Version>3.6.3</Version>
+    </PackageReference>
+    <PackageReference Include="KryptonToolkitSuite5472">
+      <Version>5.472.717</Version>
     </PackageReference>
     <PackageReference Include="snt.ScintillaNet.FindReplaceDialog">
       <Version>1.4.0</Version>

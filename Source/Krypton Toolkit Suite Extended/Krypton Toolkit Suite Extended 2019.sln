@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27323.2
+VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extended Controls", "Extended Controls\Extended Controls.csproj", "{1C9153E4-CDC4-44C9-9794-1D144FE87A1F}"
 EndProject
@@ -22,20 +22,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Readme", "Readme", "{3B7410
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Update File Creator", "Update File Creator\Update File Creator.csproj", "{589068CB-78CE-40FA-95AA-9FEAD9C183F2}"
-EndProject
-Project("{840C416C-B8F3-42BC-B0DD-F6BB14C9F8CB}") = "Setup", "Setup\Setup.aiproj", "{B663D78B-97A6-4729-9F6B-12DC5392E9C7}"
-EndProject
-Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "WIX Setup", "WIX Setup\WIX Setup.wixproj", "{7474A9BB-8747-4EF7-8513-04C8229CFD95}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Required", "Required", "{A0FB35B2-7BF6-4EA9-8A27-25DB28534230}"
-	ProjectSection(SolutionItems) = preProject
-		..\Required\Krypton Design.dll = ..\Required\Krypton Design.dll
-		..\Required\Krypton Docking.dll = ..\Required\Krypton Docking.dll
-		..\Required\Krypton Navigator.dll = ..\Required\Krypton Navigator.dll
-		..\Required\Krypton Ribbon.dll = ..\Required\Krypton Ribbon.dll
-		..\Required\Krypton Toolkit.dll = ..\Required\Krypton Toolkit.dll
-		..\Required\Krypton Workspace.dll = ..\Required\Krypton Workspace.dll
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B4B787F0-53A2-498F-8893-091C709F73E4}"
 	ProjectSection(SolutionItems) = preProject
@@ -60,8 +46,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IMG", "IMG", "{3FBD4A85-FA0
 		..\..\Updates\Changelog\IMG\Krypton.ico = ..\..\Updates\Changelog\IMG\Krypton.ico
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Palette Renderer", "Palette Renderer\Palette Renderer.csproj", "{87182631-9FEB-4250-B39F-63BB6714AEA5}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Palette Composer", "Palette Composer\Palette Composer.csproj", "{6F708C9A-C7C7-42F6-B80E-8B4CB3209C8A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Colour Creator", "Colour Creator\Colour Creator.csproj", "{EEC1BBB0-C57D-4A84-960E-C43069190F6F}"
@@ -70,11 +54,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Palette Creator", "Palette 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Global Utilities", "Global Utilities\Global Utilities.csproj", "{EDB87D0C-A37C-48B5-9857-F014C438A4C5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Colour Composer", "Colour Composer\Colour Composer.csproj", "{4BC3370D-D8CF-44E9-9D82-439AA9E937C2}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extended File Dialogs", "Extended File Dialogs\Extended File Dialogs.csproj", "{D4644D8A-1C7A-43B6-8461-AB0B56FD6463}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tooling", "Tooling\Tooling.csproj", "{EFB997FB-1E05-444B-BA02-16C004E1A111}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Tooling\Core.csproj", "{EFB997FB-1E05-444B-BA02-16C004E1A111}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Assets", "Assets", "{F105F91F-3940-44DD-AA7F-B3CEB9EBBC88}"
 EndProject
@@ -87,6 +69,15 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Krypton Toolkit Extended Hub", "Krypton Toolkit Extended Hub\Krypton Toolkit Extended Hub.csproj", "{2ED623EA-947D-4B53-9E9F-05674EF0084D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Palette Editor", "Palette Editor\Palette Editor.csproj", "{5EA4522D-B13C-45B1-9BC6-13E29587248A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Krypton Explorer", "Krypton Explorer\Krypton Explorer.csproj", "{C22089EE-7482-413B-BD23-A60DF135BF56}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Palette Explorer", "Palette Explorer\Palette Explorer.csproj", "{246B3B50-3A2D-4A6A-BB69-E56D94108AC1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TXT", "TXT", "{DE81BC2A-EC33-4847-A34E-62B5849C2A93}"
+	ProjectSection(SolutionItems) = preProject
+		KryptonCalendar-how to Kryptonize.txt = KryptonCalendar-how to Kryptonize.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -175,40 +166,6 @@ Global
 		{589068CB-78CE-40FA-95AA-9FEAD9C183F2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{589068CB-78CE-40FA-95AA-9FEAD9C183F2}.Release|x86.ActiveCfg = Release|Any CPU
 		{589068CB-78CE-40FA-95AA-9FEAD9C183F2}.Release|x86.Build.0 = Release|Any CPU
-		{B663D78B-97A6-4729-9F6B-12DC5392E9C7}.Debug|Any CPU.ActiveCfg = DefaultBuild
-		{B663D78B-97A6-4729-9F6B-12DC5392E9C7}.Debug|Any CPU.Build.0 = DefaultBuild
-		{B663D78B-97A6-4729-9F6B-12DC5392E9C7}.Debug|x86.ActiveCfg = DefaultBuild
-		{B663D78B-97A6-4729-9F6B-12DC5392E9C7}.Debug|x86.Build.0 = DefaultBuild
-		{B663D78B-97A6-4729-9F6B-12DC5392E9C7}.Installer Only|Any CPU.ActiveCfg = DefaultBuild
-		{B663D78B-97A6-4729-9F6B-12DC5392E9C7}.Installer Only|Any CPU.Build.0 = DefaultBuild
-		{B663D78B-97A6-4729-9F6B-12DC5392E9C7}.Installer Only|x86.ActiveCfg = DefaultBuild
-		{B663D78B-97A6-4729-9F6B-12DC5392E9C7}.Installer Only|x86.Build.0 = DefaultBuild
-		{B663D78B-97A6-4729-9F6B-12DC5392E9C7}.Release|Any CPU.ActiveCfg = DefaultBuild
-		{B663D78B-97A6-4729-9F6B-12DC5392E9C7}.Release|Any CPU.Build.0 = DefaultBuild
-		{B663D78B-97A6-4729-9F6B-12DC5392E9C7}.Release|x86.ActiveCfg = DefaultBuild
-		{B663D78B-97A6-4729-9F6B-12DC5392E9C7}.Release|x86.Build.0 = DefaultBuild
-		{7474A9BB-8747-4EF7-8513-04C8229CFD95}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{7474A9BB-8747-4EF7-8513-04C8229CFD95}.Debug|x86.ActiveCfg = Debug|x86
-		{7474A9BB-8747-4EF7-8513-04C8229CFD95}.Debug|x86.Build.0 = Debug|x86
-		{7474A9BB-8747-4EF7-8513-04C8229CFD95}.Installer Only|Any CPU.ActiveCfg = Release|x86
-		{7474A9BB-8747-4EF7-8513-04C8229CFD95}.Installer Only|Any CPU.Build.0 = Release|x86
-		{7474A9BB-8747-4EF7-8513-04C8229CFD95}.Installer Only|x86.ActiveCfg = Debug|x86
-		{7474A9BB-8747-4EF7-8513-04C8229CFD95}.Installer Only|x86.Build.0 = Debug|x86
-		{7474A9BB-8747-4EF7-8513-04C8229CFD95}.Release|Any CPU.ActiveCfg = Release|x86
-		{7474A9BB-8747-4EF7-8513-04C8229CFD95}.Release|x86.ActiveCfg = Release|x86
-		{7474A9BB-8747-4EF7-8513-04C8229CFD95}.Release|x86.Build.0 = Release|x86
-		{87182631-9FEB-4250-B39F-63BB6714AEA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{87182631-9FEB-4250-B39F-63BB6714AEA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{87182631-9FEB-4250-B39F-63BB6714AEA5}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{87182631-9FEB-4250-B39F-63BB6714AEA5}.Debug|x86.Build.0 = Debug|Any CPU
-		{87182631-9FEB-4250-B39F-63BB6714AEA5}.Installer Only|Any CPU.ActiveCfg = Release|Any CPU
-		{87182631-9FEB-4250-B39F-63BB6714AEA5}.Installer Only|Any CPU.Build.0 = Release|Any CPU
-		{87182631-9FEB-4250-B39F-63BB6714AEA5}.Installer Only|x86.ActiveCfg = Release|Any CPU
-		{87182631-9FEB-4250-B39F-63BB6714AEA5}.Installer Only|x86.Build.0 = Release|Any CPU
-		{87182631-9FEB-4250-B39F-63BB6714AEA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{87182631-9FEB-4250-B39F-63BB6714AEA5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{87182631-9FEB-4250-B39F-63BB6714AEA5}.Release|x86.ActiveCfg = Release|Any CPU
-		{87182631-9FEB-4250-B39F-63BB6714AEA5}.Release|x86.Build.0 = Release|Any CPU
 		{6F708C9A-C7C7-42F6-B80E-8B4CB3209C8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6F708C9A-C7C7-42F6-B80E-8B4CB3209C8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6F708C9A-C7C7-42F6-B80E-8B4CB3209C8A}.Debug|x86.ActiveCfg = Debug|Any CPU
@@ -257,18 +214,6 @@ Global
 		{EDB87D0C-A37C-48B5-9857-F014C438A4C5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{EDB87D0C-A37C-48B5-9857-F014C438A4C5}.Release|x86.ActiveCfg = Release|Any CPU
 		{EDB87D0C-A37C-48B5-9857-F014C438A4C5}.Release|x86.Build.0 = Release|Any CPU
-		{4BC3370D-D8CF-44E9-9D82-439AA9E937C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4BC3370D-D8CF-44E9-9D82-439AA9E937C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4BC3370D-D8CF-44E9-9D82-439AA9E937C2}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{4BC3370D-D8CF-44E9-9D82-439AA9E937C2}.Debug|x86.Build.0 = Debug|Any CPU
-		{4BC3370D-D8CF-44E9-9D82-439AA9E937C2}.Installer Only|Any CPU.ActiveCfg = Release|Any CPU
-		{4BC3370D-D8CF-44E9-9D82-439AA9E937C2}.Installer Only|Any CPU.Build.0 = Release|Any CPU
-		{4BC3370D-D8CF-44E9-9D82-439AA9E937C2}.Installer Only|x86.ActiveCfg = Release|Any CPU
-		{4BC3370D-D8CF-44E9-9D82-439AA9E937C2}.Installer Only|x86.Build.0 = Release|Any CPU
-		{4BC3370D-D8CF-44E9-9D82-439AA9E937C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4BC3370D-D8CF-44E9-9D82-439AA9E937C2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4BC3370D-D8CF-44E9-9D82-439AA9E937C2}.Release|x86.ActiveCfg = Release|Any CPU
-		{4BC3370D-D8CF-44E9-9D82-439AA9E937C2}.Release|x86.Build.0 = Release|Any CPU
 		{D4644D8A-1C7A-43B6-8461-AB0B56FD6463}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D4644D8A-1C7A-43B6-8461-AB0B56FD6463}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4644D8A-1C7A-43B6-8461-AB0B56FD6463}.Debug|x86.ActiveCfg = Debug|Any CPU
@@ -317,6 +262,30 @@ Global
 		{5EA4522D-B13C-45B1-9BC6-13E29587248A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5EA4522D-B13C-45B1-9BC6-13E29587248A}.Release|x86.ActiveCfg = Release|Any CPU
 		{5EA4522D-B13C-45B1-9BC6-13E29587248A}.Release|x86.Build.0 = Release|Any CPU
+		{C22089EE-7482-413B-BD23-A60DF135BF56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C22089EE-7482-413B-BD23-A60DF135BF56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C22089EE-7482-413B-BD23-A60DF135BF56}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C22089EE-7482-413B-BD23-A60DF135BF56}.Debug|x86.Build.0 = Debug|Any CPU
+		{C22089EE-7482-413B-BD23-A60DF135BF56}.Installer Only|Any CPU.ActiveCfg = Release|Any CPU
+		{C22089EE-7482-413B-BD23-A60DF135BF56}.Installer Only|Any CPU.Build.0 = Release|Any CPU
+		{C22089EE-7482-413B-BD23-A60DF135BF56}.Installer Only|x86.ActiveCfg = Release|Any CPU
+		{C22089EE-7482-413B-BD23-A60DF135BF56}.Installer Only|x86.Build.0 = Release|Any CPU
+		{C22089EE-7482-413B-BD23-A60DF135BF56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C22089EE-7482-413B-BD23-A60DF135BF56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C22089EE-7482-413B-BD23-A60DF135BF56}.Release|x86.ActiveCfg = Release|Any CPU
+		{C22089EE-7482-413B-BD23-A60DF135BF56}.Release|x86.Build.0 = Release|Any CPU
+		{246B3B50-3A2D-4A6A-BB69-E56D94108AC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{246B3B50-3A2D-4A6A-BB69-E56D94108AC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{246B3B50-3A2D-4A6A-BB69-E56D94108AC1}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{246B3B50-3A2D-4A6A-BB69-E56D94108AC1}.Debug|x86.Build.0 = Debug|Any CPU
+		{246B3B50-3A2D-4A6A-BB69-E56D94108AC1}.Installer Only|Any CPU.ActiveCfg = Release|Any CPU
+		{246B3B50-3A2D-4A6A-BB69-E56D94108AC1}.Installer Only|Any CPU.Build.0 = Release|Any CPU
+		{246B3B50-3A2D-4A6A-BB69-E56D94108AC1}.Installer Only|x86.ActiveCfg = Release|Any CPU
+		{246B3B50-3A2D-4A6A-BB69-E56D94108AC1}.Installer Only|x86.Build.0 = Release|Any CPU
+		{246B3B50-3A2D-4A6A-BB69-E56D94108AC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{246B3B50-3A2D-4A6A-BB69-E56D94108AC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{246B3B50-3A2D-4A6A-BB69-E56D94108AC1}.Release|x86.ActiveCfg = Release|Any CPU
+		{246B3B50-3A2D-4A6A-BB69-E56D94108AC1}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -328,8 +297,22 @@ Global
 		{CC796EB8-B522-4FA7-A0D5-9F35BF737D85} = {F105F91F-3940-44DD-AA7F-B3CEB9EBBC88}
 		{D12038C3-B795-4BF0-9E03-8EC282FED476} = {F105F91F-3940-44DD-AA7F-B3CEB9EBBC88}
 		{68CF0D41-4A18-47AA-A4DD-2C5031AD67CB} = {F105F91F-3940-44DD-AA7F-B3CEB9EBBC88}
+		{DE81BC2A-EC33-4847-A34E-62B5849C2A93} = {F105F91F-3940-44DD-AA7F-B3CEB9EBBC88}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A4D1018D-143A-451D-8FC0-F63E4923F552}
+	EndGlobalSection
+	GlobalSection(AutomaticVersions) = postSolution
+		PrimaryVersionType = AssemblyVersionAttribute
+		UpdateAssemblyVersion = True
+		UpdateAssemblyFileVersion = True
+		UpdateAssemblyInfoVersion = True
+		AdvancedSettingsExpanded = True
+		AssemblyVersionSettings = None.None.IncrementOnDemand.None
+		AssemblyFileVersionSettings = None.None.IncrementOnDemand.None
+		AssemblyInfoVersionSettings = None.None.IncrementOnDemand.None
+		UpdatePackageVersion = False
+		AssemblyInfoVersionType = SettingsVersion
+		InheritWinAppVersionFrom = None
 	EndGlobalSection
 EndGlobal
