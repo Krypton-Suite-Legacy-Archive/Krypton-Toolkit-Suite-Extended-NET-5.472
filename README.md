@@ -27,7 +27,6 @@
 * Removed **LinqBridge** requirement, [#48](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/issues/48)
 * Reorganised `Playground` test application
 
-
 ======
 
 ## 01-02-2019 Build 700 & Code parity with **5.470**
