@@ -25,6 +25,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls.Charting
         private bool _ShowLargeScale = true;
         private bool _isFocused = false;
         private Color _KnobColour = Color.FromKnownColor(KnownColor.ControlLight);
+        private Color _mouseOverColour = Color.FromKnownColor(KnownColor.ControlLightLight);
         private Color _KnobBorderColour = Color.FromKnownColor(KnownColor.ControlDarkDark);
         private Color _KnobBackColour = Color.FromKnownColor(KnownColor.Control);
         private int _Value;
@@ -85,7 +86,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls.Charting
             m_paletteBorder = new PaletteBorderInheritRedirect(_paletteRedirect);
             m_paletteContent = new PaletteContentInheritRedirect(_paletteRedirect);
 
-            InitColours();
+            InitColors();
 
             //This call is required by the Windows Form Designer.
             InitializeComponent();
@@ -100,7 +101,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls.Charting
             DottedPen.DashCap = System.Drawing.Drawing2D.DashCap.Round;
             setDimensions();
 
-            InitColours();
+            InitColors();
 
         }
 
@@ -134,7 +135,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls.Charting
             // KryptonKnobControl
             // 
             this.Name = "KryptonKnobControl";
-            this.Size = new System.Drawing.Size(389, 380); // 424);
+            this.Size = new System.Drawing.Size(481, 424);
             this.ResumeLayout(false);
 
         }
@@ -278,6 +279,25 @@ namespace ExtendedControls.ExtendedToolkit.Controls.Charting
                 _KnobColour = value;
                 //Refresh Colors
                 this.Invalidate();
+            }
+        }
+
+        [Browsable(true), Category("Appearance-Extended")]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        [Description("Sets the mouse over Colour of knob control")]
+        public Color MouseOverKnobColour
+        {
+            get
+            {
+                return _mouseOverColour;
+            }
+
+            set
+            {
+                _mouseOverColour = value;
+
+                // Redraw
+                Invalidate();
             }
         }
 
@@ -438,6 +458,11 @@ namespace ExtendedControls.ExtendedToolkit.Controls.Charting
                 int posVal = this.getValueFromPosition(p);
                 Value = posVal;
             }
+        }
+
+        protected override void OnMouseEnter(EventArgs e)
+        {
+            base.OnMouseEnter(e);
         }
 
         protected override void OnEnter(EventArgs e)
@@ -643,21 +668,20 @@ namespace ExtendedControls.ExtendedToolkit.Controls.Charting
             if (((this._palette != null)))
             {
                 this._palette.PalettePaint += new EventHandler<PaletteLayoutEventArgs>(this.OnPalettePaint);
-                this.InitColours();
+                this.InitColors();
             }
             base.Invalidate();
 
         }
 
 
-        private void InitColours()
+        private void InitColors()
         {
             this.BorderStyle = BorderStyle.None;
             this.KnobColour = _palette.ColorTable.OverflowButtonGradientBegin;
             this.KnobBorderColour = _palette.ColorTable.ToolStripGradientBegin;
             this.ForeColor = _palette.ColorTable.MenuItemText;
             this.KnobBackColour = _palette.ColorTable.MenuStripGradientBegin;
-            BackColor = Color.Transparent;
         }
         #endregion
 

@@ -12,7 +12,18 @@
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ApplicationVersion>4.7.410.0</ApplicationVersion>
-    <AssemblyVersion>5.472.700.0</AssemblyVersion>
+    <AssemblyVersion>5.472.720.0</AssemblyVersion>
+    <ShouldCreateLogs>True</ShouldCreateLogs>
+    <AdvancedSettingsExpanded>True</AdvancedSettingsExpanded>
+    <UpdateAssemblyVersion>True</UpdateAssemblyVersion>
+    <UpdateAssemblyFileVersion>True</UpdateAssemblyFileVersion>
+    <UpdateAssemblyInfoVersion>True</UpdateAssemblyInfoVersion>
+    <AssemblyVersionSettings>None.None.Increment.None</AssemblyVersionSettings>
+    <UpdatePackageVersion>False</UpdatePackageVersion>
+    <AssemblyInfoVersionType>SettingsVersion</AssemblyInfoVersionType>
+    <InheritWinAppVersionFrom>None</InheritWinAppVersionFrom>
+    <AssemblyFileVersionSettings>None.None.Increment.None</AssemblyFileVersionSettings>
+    <AssemblyInfoVersionSettings>None.None.Increment.None</AssemblyInfoVersionSettings>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -23,6 +34,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <LangVersion>latest</LangVersion>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -72,23 +84,37 @@
     <Compile Include="Base\ButtonSpec\ButtonSpecFormWindowMin.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Base\Code\Colours\Colour Dialog\AdobeColours.cs" />
+    <Compile Include="Base\Code\Colours\Colour Dialog\MathsExtensions.cs" />
     <Compile Include="Base\Code\Colours\Colour Wheel\Images.cs" />
     <Compile Include="Base\Code\Colours\Colour Wheel\Utilities.cs" />
     <Compile Include="Base\Code\Colours\ColourConverting.cs" />
+    <Compile Include="Base\Code\Colours\ColourExtensions.cs" />
     <Compile Include="Base\Code\Colours\ColourTypeDialogConverter.cs" />
     <Compile Include="Base\Code\Colours\ColourTypeDropDownConverter.cs" />
     <Compile Include="Base\Code\Colours\ColourTypeEditorDialog.cs" />
     <Compile Include="Base\Code\Colours\ColourTypeEditorDropDown.cs" />
+    <Compile Include="Base\Code\Colours\ExtensionColourMethods.cs" />
     <Compile Include="Base\Code\Colours\HSBColour.cs" />
     <Compile Include="Base\Code\Colours\HSLColour.cs" />
     <Compile Include="Base\Code\Colours\RGBColour.cs" />
+    <Compile Include="Base\Code\ControlHelper.cs" />
     <Compile Include="Base\Code\Drawing\ColourChangedEventArgs.cs" />
     <Compile Include="Base\Code\Drawing\ColourHandler.cs" />
     <Compile Include="Base\Code\Drawing\ColourWheel.cs" />
     <Compile Include="Base\Code\Drawing\DrawingMethods.cs" />
+    <Compile Include="Base\Code\Drawing\RoundedRectangleF.cs" />
+    <Compile Include="Base\Code\Drawing\Transparenter.cs" />
     <Compile Include="Base\Code\ExceptionHandler.cs" />
+    <Compile Include="Base\Code\File Explorer\FileSizeFormatProvider.cs" />
+    <Compile Include="Base\Code\File Explorer\WIN32.cs" />
+    <Compile Include="Base\Code\IconExtractor.cs" />
     <Compile Include="Base\Code\KryptonMessageBoxBase.cs" />
     <Compile Include="Base\Code\ListViewColumnSorter.cs" />
+    <Compile Include="Base\Code\Models\Typeface\PropertiesModel.cs" />
+    <Compile Include="Base\Code\Models\Typeface\TypefaceCollection.cs" />
+    <Compile Include="Base\Code\Models\Typeface\TypefaceLister.cs" />
+    <Compile Include="Base\Code\Models\Typeface\TypefaceModel.cs" />
     <Compile Include="Base\Code\MostRecentlyUsedFileManager.cs" />
     <Compile Include="Base\Code\PI.cs" />
     <Compile Include="Base\Code\ScrollBar\CustomScrollBar\ScrollBarArrowButtonState.cs" />
@@ -101,7 +127,10 @@
     <Compile Include="Base\Code\TypefaceHelper.cs" />
     <Compile Include="Base\Code\UtilityMethods.cs" />
     <Compile Include="Base\Enumerations\Enumerations.cs" />
+    <Compile Include="Base\Interfaces\IColourEditor.cs" />
     <Compile Include="Base\Structs\Colour Wheel\HSLColour.cs" />
+    <Compile Include="Base\Structs\File Explorer\ItemType.cs" />
+    <Compile Include="Base\Structures\HSLColour.cs" />
     <Compile Include="Base\UI\KryptonFormBase.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,6 +208,62 @@
     <Compile Include="ExtendedToolkit\Calendar\Enumerations\CalendarTimeScale.cs" />
     <Compile Include="ExtendedToolkit\Calendar\Interfaces\ICalendarSelectableElement.cs" />
     <Compile Include="ExtendedToolkit\Calendar\Interfaces\ISelectableElement.cs" />
+    <Compile Include="ExtendedToolkit\Controls\Colours\Controls\Adobe2DColourBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Colours\Controls\AdobeVerticalColourSlider.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Colours\Controls\ColourComparer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Colours\Controls\ColourWheel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Colours\Controls\ColourWheelExtended.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Experimental\KryptonMessageboxComponent.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Experimental\ToggleSwitchOriginal.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\File Explorer\FileBrowser.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonPaletteChooserComboBox.cs" />
+    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonPaletteSelector.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonToggleSwitch.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\PromptRoundedTextbox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\RoundedTextbox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\ToggleSwitch.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\MessageBoxes\UI\KryptonExceptionMessageBox.cs" />
+    <Compile Include="ExtendedToolkit\SystemDialogs\Typeface\TypefaceSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\ToolstripControls\FlashingLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\UI\Colours\AdobeColourDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\UI\Colours\ColourWheelColourPickerDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ExtendedToolkit\Controls\Charting\AquaGauge.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -313,9 +398,6 @@
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonHexadecimalColourTextBox.cs" />
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonImageComboBox.cs" />
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonLabel.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonListView.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonMonthCalendar.cs" />
@@ -645,6 +727,9 @@
     <Compile Include="ExtendedToolkit\UI\KryptonSplashScreen.Designer.cs">
       <DependentUpon>KryptonSplashScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="ExtendedToolkit\UI\Security\File Hashing\HashFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ExtendedToolkit\UI\SoftwareUpdater\UX\SoftwareUpdater.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -669,7 +754,7 @@
     <Compile Include="ExtendedToolkit\Wizard\Classes\InfoPageDesigner.cs" />
     <Compile Include="ExtendedToolkit\Wizard\Classes\PageCollection.cs" />
     <Compile Include="ExtendedToolkit\Wizard\Classes\PageEventHandler.cs" />
-    <Compile Include="ExtendedToolkit\Wizard\Controls\Wizard.cs">
+    <Compile Include="ExtendedToolkit\Wizard\Controls\KryptonWizard.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ExtendedToolkit\Wizard\Classes\WizardDesigner.cs" />
@@ -717,6 +802,9 @@
     <Content Include="ExtendedToolkit\Controls\Standard Controls\Images\RingingBell.ico" />
     <Content Include="ExtendedToolkit\Controls\Standard Controls\Images\Up.ico" />
     <Content Include="ExtendedToolkit\Controls\Standard Controls\Images\Up.png" />
+    <Compile Include="ExtendedToolkit\SystemDialogs\Typeface\TypefaceProperties.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Content Include="ExtendedToolkit\Wizard\Images\Wizard.bmp" />
     <Content Include="ExtendedToolkit\Wizard\Images\wizBigOnlineFolder.gif" />
     <Content Include="Notes\IMPORTANT.txt" />
@@ -727,8 +815,18 @@
     <None Include="Resources\DropDown2007.ico" />
     <None Include="Resources\Grip2003.ico" />
     <None Include="Resources\Grip2007.ico" />
+    <None Include="Resources\palette.ico" />
+    <None Include="Resources\color.ico" />
+    <None Include="Resources\Open_File_16_x_16.png" />
+    <None Include="Resources\Export To Document.png" />
+    <None Include="Resources\text_bold.png" />
+    <None Include="Resources\text_italic.png" />
+    <None Include="Resources\text_lowercase.png" />
+    <None Include="Resources\text_strikethrough.png" />
+    <None Include="Resources\text_underline.png" />
     <Content Include="ToolboxBitmaps\DataBar.bmp" />
     <Content Include="ToolboxBitmaps\DataChart.bmp" />
+    <Content Include="ToolboxBitmaps\ToggleSwich.bmp" />
     <Content Include="ToolboxBitmaps\UACButton.bmp" />
     <None Include="Resources\help2.png" />
     <None Include="Resources\information.png" />
@@ -843,6 +941,27 @@
     <EmbeddedResource Include="Base\UI\Test.resx">
       <DependentUpon>Test.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ExtendedToolkit\Controls\Colours\Controls\ColourComparer.resx">
+      <DependentUpon>ColourComparer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExtendedToolkit\Controls\Krypton Controls\KryptonListView.resx">
+      <DependentUpon>KryptonListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExtendedToolkit\Controls\Krypton Controls\KryptonPaletteSelector.resx">
+      <DependentUpon>KryptonPaletteSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExtendedToolkit\SystemDialogs\Typeface\TypefaceProperties.resx">
+      <DependentUpon>TypefaceProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExtendedToolkit\SystemDialogs\Typeface\TypefaceSelector.resx">
+      <DependentUpon>TypefaceSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExtendedToolkit\UI\Colours\AdobeColourDialog.resx">
+      <DependentUpon>AdobeColourDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExtendedToolkit\UI\Colours\ColourWheelColourPickerDialog.resx">
+      <DependentUpon>ColourWheelColourPickerDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\Controls\Charting\KryptonKnobControl.resx">
       <DependentUpon>KryptonKnobControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -900,6 +1019,9 @@
     <EmbeddedResource Include="ExtendedToolkit\UI\KryptonSplashScreen.resx">
       <DependentUpon>KryptonSplashScreen.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ExtendedToolkit\UI\Security\File Hashing\HashFile.resx">
+      <DependentUpon>HashFile.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\UI\SoftwareUpdater\UX\SoftwareUpdater.resx">
       <DependentUpon>SoftwareUpdater.cs</DependentUpon>
     </EmbeddedResource>
@@ -916,7 +1038,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="KryptonToolkitSuite5472">
-      <Version>5.472.717</Version>
+      <Version>5.472.720</Version>
     </PackageReference>
     <PackageReference Include="WindowsAPICodePack">
       <Version>1.1.0</Version>

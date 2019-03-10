@@ -5,8 +5,11 @@ using Core.UX.Colours;
 using Core.UX.Options;
 using ExtendedControls.Enumerations;
 using ExtendedControls.ExtendedToolkit.MessageBoxes.UI;
+using ExtendedControls.ExtendedToolkit.UI.Colours;
 using ExtendedControls.ExtendedToolkit.UI.Dialogues;
 using ExtendedControls.ExtendedToolkit.UI.Drawing;
+using ExtendedControls.ExtendedToolkit.UI.SystemBrowser;
+using ExtendedFileDialogs.UI.SystemBrowser;
 using KryptonApplicationUpdater.Classes.SettingsManager;
 //using KryptonApplicationUpdater.Interfaces;
 
@@ -304,9 +307,7 @@ namespace Playground
 
         private void kbtnMessageboxTest_Click(object sender, EventArgs e)
         {
-            KryptonMessageBox.Show(this, @"Test KryptonMessagebox", @"Check Title Text Size", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            ExtendedKryptonMessageBox.Show(this, @"Test ExtendedKryptonMessageBox Default 12", @"Check Title Text Size", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            ExtendedKryptonMessageBox.Show(this, @"Test ExtendedKryptonMessageBox specified 20", @"Check Title Text Size", MessageBoxButtons.OK, MessageBoxIcon.Information, messageboxTypeface: new Font(@"Tahoma", 20F));
+           
         }
 
         private void kbtnPaletteEditor_Click(object sender, EventArgs e)
@@ -416,6 +417,62 @@ namespace Playground
             MoreControls mc = new MoreControls();
 
             mc.Show();
+        }
+
+        private void kryptonButton14_Click(object sender, EventArgs e)
+        {
+            ColourTest colourTest = new ColourTest();
+
+            colourTest.Show();
+        }
+
+        private void kryptonButton15_Click(object sender, EventArgs e)
+        {
+            AdobeColourDialog adobeColourDialog = new AdobeColourDialog(Color.White);
+
+            adobeColourDialog.Show();
+        }
+
+        private void kryptonButton16_Click(object sender, EventArgs e)
+        {
+            KryptonFileBrowser kryptonFileBrowser = new KryptonFileBrowser();
+
+            kryptonFileBrowser.Show();
+        }
+
+        private void kryptonButton17_Click(object sender, EventArgs e)
+        {
+            KryptonFileExplorer kfe = new KryptonFileExplorer();
+
+            kfe.Show();
+        }
+
+        private void kryptonButton18_Click(object sender, EventArgs e)
+        {
+            MessageBoxTest mbt = new MessageBoxTest();
+
+            mbt.Show();
+        }
+
+        private void kryptonButton19_Click(object sender, EventArgs e)
+        {
+            PropertyGridTest pgt = new PropertyGridTest();
+
+            pgt.Show();
+        }
+
+        private void kryptonButton20_Click(object sender, EventArgs e)
+        {
+            Test test = new Test();
+
+            test.Show();
+        }
+
+        private void kryptonButton21_Click(object sender, EventArgs e)
+        {
+            TestRig tr = new TestRig();
+
+            tr.Show();
         }
     }
 }
