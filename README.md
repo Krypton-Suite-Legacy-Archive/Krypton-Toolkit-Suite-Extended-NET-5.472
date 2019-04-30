@@ -22,6 +22,51 @@
 
 ======
 
+## Control Examples
+
+Please refer to [examples](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.472/blob/master/Examples.md) to see what each control looks like.
+
+<!--======
+## 2019-06-01 Build 10xx - June Update
+* New `Palette Explorer` controls
+* Merged all settings into `Toolkit Settings.dll`
+* Begun work on [#70](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/issues/70)
+* Implemented [NaviSuite](https://github.com/jacobmesu/Guifreaks-Navisuite) by [Jacobmesu](https://github.com/jacobmesu)
+* New file varifier app to work with May's file checksum calculator
+* Upgraded to Krypton Toolkit Suite - version: **5.470.xxx**
+* Build 10xx (build date Saturday 1st, June 2019) is now available on NuGet
+-->
+
+<!--======
+
+## 2019-05-01 Build 9xx - May Update
+* Outlook 2003 style toast notification
+* File checksum calculator (MD5, SHA-1, SHA-256, SHA-384, SHA-512 and RIPEMD-160)
+* New `KryptonPaletteManager` class for dealing with creating custom `KryptonPalette`'s
+* Ribbon enhancements, merge two ribbons together
+* Capture version information from another file
+* Playground application reorganisation
+* Images of controls to show developers what they look like
+* Image resizing utility - resize & save images on the fly
+* New palette explorer user controls - will make it quicker to design the application
+* Fix palette theme selector, issue [#71](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/issues/71)
+* General tidyup of code & API updates
+* XML documentation files for DLLs
+* New palette theme selector
+* New `KryptonToastNotification` window
+* New circular progressbar control
+* Random password generator (for use on future user creation dialog)
+* New developer API tools for internal development of the toolkit
+* Begun re-working the `Palette Explorer` application
+* New `Palette Upgrade Tool` application for upgrading any older palette `xml` files
+* Theme `*.xml` files are now available to view and edit in the Visual Studio solution under the **themes** folder
+* All theme files are now bundled with the NuGet package
+* Upgraded to Krypton Toolkit Suite - version: **5.472.901**
+* Build 9xx (build date Wednesday 1st, May 2019) is now available on NuGet
+-->
+
+======
+
 ## 2019-03-10 Build 797
 * Build 797 (build date Sunday 10th, March 2019) is now available on NuGet
 * New colour wheel colour dialog

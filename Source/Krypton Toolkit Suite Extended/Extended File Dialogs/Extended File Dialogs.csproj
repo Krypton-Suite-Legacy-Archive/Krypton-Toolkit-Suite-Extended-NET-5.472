@@ -21,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Extended File Dialogs.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -130,6 +131,9 @@
     <Compile Include="UI\ExtendedSystemForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="UI\Palette\OpenKryptonPaletteFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UI\System Browser\KryptonFileBrowser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +156,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Palette\OpenKryptonPaletteFile.resx">
+      <DependentUpon>OpenKryptonPaletteFile.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\System Browser\KryptonFileBrowser.resx">
       <DependentUpon>KryptonFileBrowser.cs</DependentUpon>
     </EmbeddedResource>
@@ -167,6 +174,10 @@
     <ProjectReference Include="..\Global Utilities\Global Utilities.csproj">
       <Project>{edb87d0c-a37c-48b5-9857-f014c438a4c5}</Project>
       <Name>Global Utilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tooling\Core.csproj">
+      <Project>{efb997fb-1e05-444b-ba02-16c004e1a111}</Project>
+      <Name>Core</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -206,7 +217,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="KryptonToolkitSuite5472">
-      <Version>5.472.720</Version>
+      <Version>5.472.901</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

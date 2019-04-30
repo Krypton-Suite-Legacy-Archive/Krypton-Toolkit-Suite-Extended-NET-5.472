@@ -21,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Core.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -71,6 +72,8 @@
     <Compile Include="Classes\Colours\RawPaletteSerialiser.cs" />
     <Compile Include="Classes\Colours\SettingsManager.cs" />
     <Compile Include="Classes\Colours\WIN32.cs" />
+    <Compile Include="Classes\ExceptionHandler.cs" />
+    <Compile Include="Classes\MessageBoxes\ExtendedKryptonMessageBox.cs" />
     <Compile Include="Classes\Options\Theming\ThemingLogic.cs" />
     <Compile Include="Classes\Colours\ColourControlManager.cs" />
     <Compile Include="Classes\Colours\ColourFormatting.cs" />
@@ -88,8 +91,12 @@
     <Compile Include="Classes\Other\ToolTipManager.cs" />
     <Compile Include="Classes\Other\TypefaceHelper.cs" />
     <Compile Include="Classes\Palette\PaletteCompisitionEngine.cs" />
+    <Compile Include="Classes\Security\HashingAlgorithms.cs" />
+    <Compile Include="Classes\Security\RandomPassword.cs" />
+    <Compile Include="Classes\Security\SecurityMethods.cs" />
     <Compile Include="Classes\Theming\PaletteColourManagementEngine.cs" />
     <Compile Include="Classes\Theming\ThemeManager.cs" />
+    <Compile Include="Classes\Utilities\PI.cs" />
     <Compile Include="Classes\Utilities\Utility.cs" />
     <Compile Include="Classes\Utilities\WIN32.cs" />
     <Compile Include="Controls\Colours\ColourEditorManager.cs">
@@ -126,6 +133,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Enumerations\Enumerations.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Interfaces\Colours\IColourPalette.cs" />
     <Compile Include="Interfaces\IAbout.cs" />
     <Compile Include="Interfaces\IColourEditor.cs" />
@@ -494,7 +502,7 @@
       <Version>1.0.5</Version>
     </PackageReference>
     <PackageReference Include="KryptonToolkitSuite5472">
-      <Version>5.472.720</Version>
+      <Version>5.472.901</Version>
     </PackageReference>
     <PackageReference Include="snt.ScintillaNet.FindReplaceDialog">
       <Version>1.4.0</Version>
@@ -506,6 +514,23 @@
   <ItemGroup>
     <None Include="Resources\Colour_Wheel_16_x_16.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Critical_32_x_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hand_32_x_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Information_32_x_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Question_32_x_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stop_32_x_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Warning_32_x_32.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

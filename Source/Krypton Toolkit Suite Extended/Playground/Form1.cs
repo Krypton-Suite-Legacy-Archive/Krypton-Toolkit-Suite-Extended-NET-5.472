@@ -3,6 +3,8 @@ using Core.Classes.Other;
 using Core.UX;
 using Core.UX.Colours;
 using Core.UX.Options;
+using ExtendedControls.Base.Code.Development;
+using ExtendedControls.Base.Enumerations;
 using ExtendedControls.Enumerations;
 using ExtendedControls.ExtendedToolkit.MessageBoxes.UI;
 using ExtendedControls.ExtendedToolkit.UI.Colours;
@@ -14,6 +16,7 @@ using KryptonApplicationUpdater.Classes.SettingsManager;
 //using KryptonApplicationUpdater.Interfaces;
 
 using KryptonExtendedToolkit.Base.Code;
+using KryptonExtendedToolkit.ExtendedToolkit.Controls;
 using System;
 using System.Diagnostics;
 using System.Drawing;
@@ -31,6 +34,7 @@ namespace Playground
         private MostRecentlyUsedFileManager mostRecentlyUsedFileManager;
         private Version currentVersion = Assembly.GetExecutingAssembly().GetName().Version;
         private ToolStripNonClientRenderer toolStripNonClientRenderer;
+        Assembly _currentAssembly = Assembly.GetExecutingAssembly();
 
         public Form1()
         {
@@ -79,7 +83,7 @@ namespace Playground
                 kcmbGradientDirection.Items.Add(lgm.ToString().ToUpper());
             }
 
-            //kcmbGradientDirection.d
+            DevelopmentInformation.SetBuildInformation(this, _currentAssembly, DevelopmentState.BETA);
         }
 
         private void MyOwnRecentFileGotClicked_Handler(object sender, EventArgs e)
@@ -223,17 +227,17 @@ namespace Playground
 
         private void kcbtnGradientColour1_SelectedColorChanged(object sender, ColorEventArgs e)
         {
-            etslBlinkTest.GradientColourOne = kcbtnGradientColour1.SelectedColor;
+           
         }
 
         private void kcbtnGradientColour2_SelectedColorChanged(object sender, ColorEventArgs e)
         {
-            etslBlinkTest.GradientColourTwo = kcbtnGradientColour2.SelectedColor;
+            
         }
 
         private void kcbtnTextColour_SelectedColorChanged(object sender, ColorEventArgs e)
         {
-            etslBlinkTest.ForeColor = kcbtnTextColour.SelectedColor;
+            
         }
 
         private void kcmbGradientDirection_SelectedIndexChanged(object sender, EventArgs e)
@@ -248,54 +252,22 @@ namespace Playground
 
         private void kcbtnHorizontal_Click(object sender, EventArgs e)
         {
-            etslBlinkTest.GradientMode = LinearGradientMode.Horizontal;
-
-            kcbtnHorizontal.Checked = true;
-
-            kcbtnVertical.Checked = false;
-
-            kcbtnForwardDiagonal.Checked = false;
-
-            kcbtnBackwardDiagonal.Checked = false;
+           
         }
 
         private void kcbtnVertical_Click(object sender, EventArgs e)
         {
-            etslBlinkTest.GradientMode = LinearGradientMode.Vertical;
-
-            kcbtnHorizontal.Checked = false;
-
-            kcbtnVertical.Checked = true;
-
-            kcbtnForwardDiagonal.Checked = false;
-
-            kcbtnBackwardDiagonal.Checked = false;
+          
         }
 
         private void kcbtnForwardDiagonal_Click(object sender, EventArgs e)
         {
-            etslBlinkTest.GradientMode = LinearGradientMode.ForwardDiagonal;
-
-            kcbtnHorizontal.Checked = false;
-
-            kcbtnVertical.Checked = false;
-
-            kcbtnForwardDiagonal.Checked = true;
-
-            kcbtnBackwardDiagonal.Checked = false;
+           
         }
 
         private void kcbtnBackwardDiagonal_Click(object sender, EventArgs e)
         {
-            etslBlinkTest.GradientMode = LinearGradientMode.BackwardDiagonal;
-
-            kcbtnHorizontal.Checked = false;
-
-            kcbtnVertical.Checked = false;
-
-            kcbtnForwardDiagonal.Checked = false;
-
-            kcbtnBackwardDiagonal.Checked = true;
+           
         }
 
         private void kryptonButton2_Click(object sender, EventArgs e)
@@ -336,6 +308,7 @@ namespace Playground
         private void kuacsbElevate_Click(object sender, EventArgs e)
         {
 
+            UtilityMethods.ElevateProcessWithAdministrativeRights(@"C:\\Windows\\Notepad.exe");
         }
 
         private void kryptonButton5_Click(object sender, EventArgs e)
@@ -389,10 +362,7 @@ namespace Playground
 
         private void kryptonCommandLinkButton2_Click(object sender, EventArgs e)
         {
-            using (CommandLinkStyles cls = new CommandLinkStyles())
-            {
-                cls.ShowDialog(this);
-            }
+           
         }
 
         private void kryptonCheckBox1_CheckedChanged(object sender, EventArgs e)
@@ -470,9 +440,31 @@ namespace Playground
 
         private void kryptonButton21_Click(object sender, EventArgs e)
         {
-            TestRig tr = new TestRig();
+            Examples tr = new Examples();
 
             tr.Show();
+        }
+
+        private void kryptonButton1_Click_1(object sender, EventArgs e)
+        {
+            FlashingLabelTest flashingLabel = new FlashingLabelTest();
+
+            flashingLabel.Show();
+        }
+
+        private void toolStripMenuItemUACSheld1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void KryptonPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void KryptonCommandLinkVersion21_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
