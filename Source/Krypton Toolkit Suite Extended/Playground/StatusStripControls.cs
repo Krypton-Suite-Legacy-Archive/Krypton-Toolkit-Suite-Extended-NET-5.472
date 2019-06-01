@@ -1,4 +1,13 @@
-﻿using ComponentFactory.Krypton.Toolkit;
+﻿#region BSD License
+/*
+ * Use of this source code is governed by a BSD-style
+ * license that can be found in the LICENSE.md file or at
+ * https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.472/blob/master/LICENSE
+ *
+ */
+#endregion
+
+using ComponentFactory.Krypton.Toolkit;
 using System;
 using System.Drawing.Drawing2D;
 
@@ -111,7 +120,7 @@ namespace Playground
             // o07cptsiTest
             // 
             this.o07cptsiTest.Office2007ColourPickerControl.AccessibleName = "o07cptsiTest";
-            this.o07cptsiTest.Office2007ColourPickerControl.Color = System.Drawing.Color.Black;
+            this.o07cptsiTest.Office2007ColourPickerControl.SelectedColour = System.Drawing.Color.Black;
             this.o07cptsiTest.Office2007ColourPickerControl.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.o07cptsiTest.Office2007ColourPickerControl.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.o07cptsiTest.Office2007ColourPickerControl.Items.AddRange(new object[] {
