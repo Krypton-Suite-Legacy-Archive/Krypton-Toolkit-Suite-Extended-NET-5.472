@@ -189,7 +189,7 @@ namespace Playground
             // 
             this.rtbTextPad.Location = new System.Drawing.Point(16, 45);
             this.rtbTextPad.Name = "rtbTextPad";
-            this.rtbTextPad.Size = new System.Drawing.Size(475, 472);
+            this.rtbTextPad.Size = new System.Drawing.Size(475, 470);
             this.rtbTextPad.TabIndex = 7;
             this.rtbTextPad.Text = "";
             // 
