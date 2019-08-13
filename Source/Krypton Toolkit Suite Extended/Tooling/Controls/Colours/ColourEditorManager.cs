@@ -2,24 +2,24 @@
 /*
  * Use of this source code is governed by a BSD-style
  * license that can be found in the LICENSE.md file or at
- * https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.472/blob/master/LICENSE
+ * https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/blob/master/LICENSE
  *
  */
 #endregion
 
-using Core.Interfaces;
-using Core.STRUCTS;
-using Core.UserControls.Colours;
 using System;
 using System.ComponentModel;
 using System.Drawing;
+using Core.Interfaces;
+using Core.STRUCTS;
+using Core.UserControls.Colours;
 
 namespace Core.Controls.Colours
 {
     /// <summary>
     /// Represents a control that binds multiple editors together as a single composite unit.
     /// </summary>
-    [DefaultEvent("ColourChanged")]
+    [DefaultEvent("ColourChanged"), ToolboxItem(false)]
     public class ColourEditorManager : Component, IColourEditor
     {
         #region Constants

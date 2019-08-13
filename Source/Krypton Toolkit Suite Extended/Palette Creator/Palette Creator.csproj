@@ -8,10 +8,10 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>PaletteCreator</RootNamespace>
     <AssemblyName>Palette Creator</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <AssemblyVersion>5.472.590.0</AssemblyVersion>
+    <AssemblyVersion>5.470.590.0</AssemblyVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -348,8 +348,8 @@
     <None Include="Resources\ui-label-link.png" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="KryptonToolkitSuite5472">
-      <Version>5.472.1222</Version>
+    <PackageReference Include="KryptonToolkitSuite5470">
+      <Version>5.470.1231</Version>
     </PackageReference>
     <PackageReference Include="WindowsAPICodePack">
       <Version>1.1.0</Version>

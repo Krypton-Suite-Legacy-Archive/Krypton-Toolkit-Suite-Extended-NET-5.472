@@ -2,13 +2,11 @@
 /*
  * Use of this source code is governed by a BSD-style
  * license that can be found in the LICENSE.md file or at
- * https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.472/blob/master/LICENSE
+ * https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/blob/master/LICENSE
  *
  */
 #endregion
 
-using Core.Classes.Colours;
-using Core.Enumerations;
 using System;
 using System.ComponentModel;
 using System.Drawing;
@@ -16,15 +14,15 @@ using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 using System.Linq;
 using System.Windows.Forms;
+using Core.Classes.Colours;
+using Core.Enumerations;
 
 namespace Core.Controls.Colours
 {
     /// <summary>
     /// Represents a control for selecting a value from a scale
     /// </summary>
-    [DefaultValue("Value")]
-    [DefaultEvent("ValueChanged")]
-    [ToolboxItem(false)]
+    [DefaultValue("Value"), DefaultEvent("ValueChanged"), ToolboxItem(false)]
     public class ColourSlider : Control
     {
         #region Constants

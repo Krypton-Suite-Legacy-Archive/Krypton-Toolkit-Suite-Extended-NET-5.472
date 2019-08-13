@@ -9,9 +9,7 @@ namespace Playground
 {
     public class FloatingMenuStripExample : KryptonForm
     {
-		#region Designer Code
-        private ExtendedControls.ExtendedToolkit.FloatingFramework.Controls.MenuStripPanelExtened menuStripPanelExtened1;
-        private ExtendedControls.ExtendedToolkit.FloatingFramework.Controls.FloatableMenuStrip floatableMenuStrip1;
+        private FloatingToolbars.Components.FloatableMenuStrip floatableMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
@@ -41,12 +39,14 @@ namespace Playground
         private System.Windows.Forms.ToolStripMenuItem searchToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private KryptonPanel kryptonPanel1;
+        private FloatingToolbars.Components.MenuStripPanelExtened mspeTest;
 
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FloatingMenuStripExample));
-            this.menuStripPanelExtened1 = new ExtendedControls.ExtendedToolkit.FloatingFramework.Controls.MenuStripPanelExtened();
-            this.floatableMenuStrip1 = new ExtendedControls.ExtendedToolkit.FloatingFramework.Controls.FloatableMenuStrip();
+            this.mspeTest = new FloatingToolbars.Components.MenuStripPanelExtened();
+            this.floatableMenuStrip1 = new FloatingToolbars.Components.FloatableMenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -76,23 +76,27 @@ namespace Playground
             this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStripPanelExtened1.SuspendLayout();
+            this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.mspeTest.SuspendLayout();
             this.floatableMenuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.SuspendLayout();
             // 
-            // menuStripPanelExtened1
+            // mspeTest
             // 
-            this.menuStripPanelExtened1.Controls.Add(this.floatableMenuStrip1);
-            this.menuStripPanelExtened1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.menuStripPanelExtened1.Location = new System.Drawing.Point(0, 0);
-            this.menuStripPanelExtened1.Name = "menuStripPanelExtened1";
-            this.menuStripPanelExtened1.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            this.menuStripPanelExtened1.RowMargin = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.menuStripPanelExtened1.Size = new System.Drawing.Size(771, 24);
+            this.mspeTest.Controls.Add(this.floatableMenuStrip1);
+            this.mspeTest.Dock = System.Windows.Forms.DockStyle.Top;
+            this.mspeTest.FloatableMenuStrip = null;
+            this.mspeTest.Location = new System.Drawing.Point(0, 0);
+            this.mspeTest.Name = "mspeTest";
+            this.mspeTest.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.mspeTest.RowMargin = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.mspeTest.Size = new System.Drawing.Size(582, 24);
             // 
             // floatableMenuStrip1
             // 
             this.floatableMenuStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.floatableMenuStrip1.FloatingWindowText = "Menu";
             this.floatableMenuStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.floatableMenuStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
             this.floatableMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -103,9 +107,9 @@ namespace Playground
             this.floatableMenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
             this.floatableMenuStrip1.Location = new System.Drawing.Point(0, 0);
             this.floatableMenuStrip1.Name = "floatableMenuStrip1";
-            this.floatableMenuStrip1.Size = new System.Drawing.Size(771, 24);
+            this.floatableMenuStrip1.Size = new System.Drawing.Size(582, 24);
             this.floatableMenuStrip1.TabIndex = 0;
-            this.floatableMenuStrip1.Text = "floatableMenuStrip1";
+            this.floatableMenuStrip1.Text = "Menu Strip";
             // 
             // fileToolStripMenuItem
             // 
@@ -329,27 +333,42 @@ namespace Playground
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.aboutToolStripMenuItem.Text = "&About...";
             // 
-            // FloatingMenuStripExample
+            // kryptonPanel1
             // 
-            this.ClientSize = new System.Drawing.Size(771, 379);
-            this.Controls.Add(this.menuStripPanelExtened1);
+            this.kryptonPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kryptonPanel1.Location = new System.Drawing.Point(0, 24);
+            this.kryptonPanel1.Name = "kryptonPanel1";
+            this.kryptonPanel1.Size = new System.Drawing.Size(582, 485);
+            this.kryptonPanel1.TabIndex = 1;
+            // 
+            // FloatingMenuStrip
+            // 
+            this.ClientSize = new System.Drawing.Size(582, 509);
+            this.Controls.Add(this.kryptonPanel1);
+            this.Controls.Add(this.mspeTest);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.floatableMenuStrip1;
-            this.Name = "FloatingMenuStripExample";
-            this.menuStripPanelExtened1.ResumeLayout(false);
-            this.menuStripPanelExtened1.PerformLayout();
+            this.Name = "FloatingMenuStrip";
+            this.Text = "FloatingMenuStripForm";
+            this.Load += new System.EventHandler(this.FloatingMenuStrip_Load);
+            this.mspeTest.ResumeLayout(false);
+            this.mspeTest.PerformLayout();
             this.floatableMenuStrip1.ResumeLayout(false);
             this.floatableMenuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
-		#endregion
-		
-		#region Constructor
-		public FloatingMenuStripExample()
-		{
-			InitializeComponent();
-		}
-		#endregion
+
+        public FloatingMenuStripExample()
+        {
+            InitializeComponent();
+        }
+
+        private void FloatingMenuStrip_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

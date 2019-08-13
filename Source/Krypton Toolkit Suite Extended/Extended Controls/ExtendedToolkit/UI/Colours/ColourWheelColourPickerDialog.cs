@@ -2,7 +2,7 @@
 /*
  * Use of this source code is governed by a BSD-style
  * license that can be found in the LICENSE.md file or at
- * https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.472/blob/master/LICENSE
+ * https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/blob/master/LICENSE
  *
  */
 #endregion
@@ -30,6 +30,8 @@ namespace ExtendedControls.ExtendedToolkit.UI.Colours
         [Category("Appearance")]
         //[DefaultValue(Color.Transparent)]
         public Color SelectedColour { get { return _selectedColour; } set { _selectedColour = value; } }
+
+        public Color Colour { get; set; }
 
         public bool IsUpdating { get { return _isUpdating; } set { _isUpdating = value; } }
         #endregion

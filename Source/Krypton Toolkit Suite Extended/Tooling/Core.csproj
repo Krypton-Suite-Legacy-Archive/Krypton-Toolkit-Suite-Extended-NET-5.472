@@ -9,9 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Core</RootNamespace>
     <AssemblyName>Core</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AssemblyVersion>5.472.740.0</AssemblyVersion>
+    <AssemblyVersion>5.470.740.0</AssemblyVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -365,8 +365,8 @@
     <PackageReference Include="EasyScintilla">
       <Version>1.0.5</Version>
     </PackageReference>
-    <PackageReference Include="KryptonToolkitSuite5472">
-      <Version>5.472.1222</Version>
+    <PackageReference Include="KryptonToolkitSuite5470">
+      <Version>5.470.1251</Version>
     </PackageReference>
     <PackageReference Include="snt.ScintillaNet.FindReplaceDialog">
       <Version>1.4.0</Version>
