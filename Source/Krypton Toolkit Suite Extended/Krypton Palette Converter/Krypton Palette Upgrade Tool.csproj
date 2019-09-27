@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>KryptonPaletteUpgradeTool</RootNamespace>
     <AssemblyName>Krypton Palette Upgrade Tool</AssemblyName>
-    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -113,8 +113,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="KryptonToolkitSuite5470">
-      <Version>5.470.1251</Version>
+    <PackageReference Include="KryptonToolkitSuite5472">
+      <Version>5.472.1254</Version>
     </PackageReference>
     <PackageReference Include="WindowsAPICodePack">
       <Version>1.1.0</Version>

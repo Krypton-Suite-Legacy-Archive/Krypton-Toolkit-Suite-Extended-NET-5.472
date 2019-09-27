@@ -2,7 +2,7 @@
 /*
  * Use of this source code is governed by a BSD-style
  * license that can be found in the LICENSE.md file or at
- * https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/blob/master/LICENSE
+ * https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.472/blob/master/LICENSE
  *
  */
 #endregion
@@ -621,7 +621,7 @@ namespace ExtendedFileDialogs.Controls.Old
         DefaultView = 0x461,
         LeftToolBar = 0x4A0,
         ComboFileName = 0x47c,
-        ComboFileType = 0x470,
+        ComboFileType = 0x472,
         ComboFolder = 0x471,
         CheckBoxReadOnly = 0x410
     }

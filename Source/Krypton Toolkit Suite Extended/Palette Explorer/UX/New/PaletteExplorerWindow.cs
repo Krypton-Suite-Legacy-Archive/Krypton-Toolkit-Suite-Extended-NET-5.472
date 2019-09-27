@@ -2,7 +2,7 @@
 /*
  * Use of this source code is governed by a BSD-style
  * license that can be found in the LICENSE.md file or at
- * https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/blob/master/LICENSE
+ * https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.472/blob/master/LICENSE
  *
  */
 #endregion
@@ -1334,7 +1334,7 @@ namespace PaletteExplorer.UX.New
             // buttonSpecAny28
             // 
             this.buttonSpecAny28.Type = ComponentFactory.Krypton.Toolkit.PaletteButtonSpecStyle.ArrowDown;
-            this.buttonSpecAny28.UniqueName = "5C9E40DBFF67470B5C9E40DBFF67470B";
+            this.buttonSpecAny28.UniqueName = "5C9E40DBFF67472B5C9E40DBFF67472B";
             // 
             // buttonSpecAny27
             // 
