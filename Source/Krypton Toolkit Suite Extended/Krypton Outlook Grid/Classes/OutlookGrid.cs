@@ -849,45 +849,48 @@ namespace KryptonOutlookGrid.Classes
                 else if (e.Button == MouseButtons.Left)
                 {
                     OutlookGridColumn col = internalColumns.FindFromColumnIndex(e.ColumnIndex);
-                    if (col.DataGridViewColumn.SortMode != DataGridViewColumnSortMode.NotSortable)
+                    if (col != null)
                     {
-                        SortOrder previousSort = col.SortDirection;
-                        //Reset all sorting column only if not Ctrl or Shift or the column is grouped
-                        if (Control.ModifierKeys != Keys.Shift && Control.ModifierKeys != Keys.Control && !col.IsGrouped)
+                        if (col.DataGridViewColumn.SortMode != DataGridViewColumnSortMode.NotSortable)
                         {
-                            ResetAllSortingColumns();
-                        }
-
-                        //Remove this SortIndex
-                        if (Control.ModifierKeys == Keys.Control)
-                        {
-                            UnSortColum(col);
-                        }
-                        //Add the first or a new SortIndex
-                        else
-                        {
-                            if (previousSort == SortOrder.None)
+                            SortOrder previousSort = col.SortDirection;
+                            //Reset all sorting column only if not Ctrl or Shift or the column is grouped
+                            if (Control.ModifierKeys != Keys.Shift && Control.ModifierKeys != Keys.Control && !col.IsGrouped)
                             {
-                                SortColumn(col, SortOrder.Ascending);
+                                ResetAllSortingColumns();
                             }
+
+                            //Remove this SortIndex
+                            if (Control.ModifierKeys == Keys.Control)
+                            {
+                                UnSortColum(col);
+                            }
+                            //Add the first or a new SortIndex
                             else
                             {
-                                SortColumn(col, (previousSort == SortOrder.Ascending) ? SortOrder.Descending : SortOrder.Ascending);
+                                if (previousSort == SortOrder.None)
+                                {
+                                    SortColumn(col, SortOrder.Ascending);
+                                }
+                                else
+                                {
+                                    SortColumn(col, (previousSort == SortOrder.Ascending) ? SortOrder.Descending : SortOrder.Ascending);
+                                }
                             }
-                        }
 
 #if DEBUG
-                        internalColumns.DebugOutput();
+                            internalColumns.DebugOutput();
 #endif
 
-                        //Refresh the groupBox if the column is grouped
-                        if (col.IsGrouped)
-                        {
-                            ForceRefreshGroupBox();
-                        }
+                            //Refresh the groupBox if the column is grouped
+                            if (col.IsGrouped)
+                            {
+                                ForceRefreshGroupBox();
+                            }
 
-                        //Apply the changes
-                        Fill();
+                            //Apply the changes
+                            Fill();
+                        }
                     }
                 }
             }
