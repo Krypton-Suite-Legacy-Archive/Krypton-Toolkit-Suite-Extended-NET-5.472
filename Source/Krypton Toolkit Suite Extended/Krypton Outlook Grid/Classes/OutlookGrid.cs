@@ -99,7 +99,7 @@ namespace KryptonOutlookGrid.Classes
         private bool _hideColumnOnGrouping;
 
         //Nodes
-        private bool _showLines;
+        private bool _showLines = true;
         internal bool _inExpandCollapseMouseCapture = false;
         private FillMode _fillMode;
 
