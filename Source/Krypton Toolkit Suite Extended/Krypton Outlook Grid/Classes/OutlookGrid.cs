@@ -59,6 +59,7 @@ namespace KryptonOutlookGrid.Classes
         private int _previousGroupRowSelected = -1; //Useful to allow the selection of a group row or not when on mouse down 
 
         //Krypton ContextMenu for the columns header
+        private bool _allowdefaultcontextmenu = true;
         private KryptonContextMenu KCtxMenu;
         private KryptonContextMenuItems _menuItems;
         private KryptonContextMenuItem _menuSortAscending;
@@ -382,6 +383,16 @@ namespace KryptonOutlookGrid.Classes
                     Invalidate();
                 }
             }
+        }
+
+        /// <summary>
+        /// Enables integrated context menu
+        /// </summary>
+        [DefaultValue(true)]
+        public bool AllowDefaultContextmenu
+        {
+            get { return _allowdefaultcontextmenu; }
+            set { _allowdefaultcontextmenu = value; }
         }
 
         #endregion OutlookGrid property definitions
@@ -830,7 +841,10 @@ namespace KryptonOutlookGrid.Classes
             {
                 if (e.Button == MouseButtons.Right)
                 {
-                    ShowColumnHeaderContextMenu(e.ColumnIndex);
+                    if (AllowDefaultContextmenu)
+                    {
+                        ShowColumnHeaderContextMenu(e.ColumnIndex);
+                    }
                 }
                 else if (e.Button == MouseButtons.Left)
                 {
