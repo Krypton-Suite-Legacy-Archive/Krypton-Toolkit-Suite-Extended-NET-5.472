@@ -2777,7 +2777,7 @@ namespace KryptonOutlookGrid.Classes
             {
                 if (groupCollection[0].Column.GroupingType.SortBySummaryCount)
                     groupCollection.Sort(new OutlookGridGroupCountComparer());
-                else
+                else if (GroupCollection[0].Column.SortDirection != SortOrder.None)
                     groupCollection.Sort();
             }
 
