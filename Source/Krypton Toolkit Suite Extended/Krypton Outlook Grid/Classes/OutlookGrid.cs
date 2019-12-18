@@ -1465,7 +1465,10 @@ namespace KryptonOutlookGrid.Classes
             {
                 internalColumns.Add(col);
                 //Already reflect the SortOrder on the column
-                col.DataGridViewColumn.HeaderCell.SortGlyphDirection = col.SortDirection;
+                if (col.DataGridViewColumn.SortMode != DataGridViewColumnSortMode.NotSortable)
+                {
+                    col.DataGridViewColumn.HeaderCell.SortGlyphDirection = col.SortDirection;
+                }
                 if (_hideColumnOnGrouping && col.GroupIndex > -1 && col.GroupingType.AllowHiddenWhenGrouped)
                     col.DataGridViewColumn.Visible = false;
             }
