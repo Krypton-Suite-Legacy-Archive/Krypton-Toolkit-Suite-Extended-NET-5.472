@@ -291,7 +291,9 @@ namespace KryptonOutlookGrid.Classes
                 Rectangle myRowBounds = rowBounds;
                 myRowBounds.Width = gridwidth;
 
-                IPaletteBack paletteBack = grid.StateNormal.DataCell.Back;
+                PaletteBack paletteBack = group.Back;
+                paletteBack.SetInherit(grid.StateNormal.DataCell.Back);
+
                 IPaletteBorder paletteBorder = grid.StateNormal.DataCell.Border;
 
                 PaletteState state = PaletteState.Normal;
