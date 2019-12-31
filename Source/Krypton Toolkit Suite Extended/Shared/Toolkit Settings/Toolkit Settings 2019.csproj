@@ -52,6 +52,7 @@
     <Compile Include="Classes\Application Updater\XMLFileApplicationUpdaterSettingsManager.cs" />
     <Compile Include="Classes\Core\ColourIntegerSettingsManager.cs" />
     <Compile Include="Classes\Core\ColourStringSettingsManager.cs" />
+    <Compile Include="Classes\Dialogs\Run\RunDialogSettingsManager.cs" />
     <Compile Include="Classes\Extended Controls\BooleanSettingsManager.cs" />
     <Compile Include="Classes\Extended Controls\StringSettingsManager.cs" />
     <Compile Include="Classes\Extended Controls\ThemeSettingsManager.cs" />
@@ -111,6 +112,11 @@
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>ColourStringSettings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\Dialogs\Run\RunDialogSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>RunDialogSettings.settings</DependentUpon>
     </Compile>
     <Compile Include="Settings\Extended Controls\BooleanSettings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -250,6 +256,10 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>ColourStringSettings.Designer.cs</LastGenOutput>
     </None>
+    <None Include="Settings\Dialogs\Run\RunDialogSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>RunDialogSettings.Designer.cs</LastGenOutput>
+    </None>
     <None Include="Settings\Extended Controls\BooleanSettings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>BooleanSettings.Designer.cs</LastGenOutput>
@@ -379,7 +389,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="KryptonToolkitSuite5472">
-      <Version>5.472.2000</Version>
+      <Version>5.472.2098</Version>
     </PackageReference>
     <PackageReference Include="WindowsAPICodePack">
       <Version>1.1.0</Version>
@@ -392,4 +402,7 @@
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(TargetDir)*.*" "$(ProjectDir)..\..\..\..\Bin\Shared\Toolkit Settings\" /D /R /Y /S</PostBuildEvent>
+  </PropertyGroup>
 </Project>

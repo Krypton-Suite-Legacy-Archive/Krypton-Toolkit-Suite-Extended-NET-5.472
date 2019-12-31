@@ -161,7 +161,7 @@
       <Version>1.7.2</Version>
     </PackageReference>
     <PackageReference Include="KryptonToolkitSuite5472">
-      <Version>5.472.2000</Version>
+      <Version>5.472.2098</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
@@ -235,4 +235,7 @@
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(TargetDir)*.*" "$(ProjectDir)..\..\..\..\Bin\Individual Components\Extended Colour Controls\" /D /R /Y /S</PostBuildEvent>
+  </PropertyGroup>
 </Project>

@@ -103,4 +103,7 @@
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(TargetDir)*.*" "$(ProjectDir)..\..\..\..\Bin\Shared\Toolkit Control Settings\" /D /R /Y /S</PostBuildEvent>
+  </PropertyGroup>
 </Project>

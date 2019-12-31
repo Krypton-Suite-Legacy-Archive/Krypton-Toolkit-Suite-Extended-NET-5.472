@@ -47,6 +47,8 @@
   <ItemGroup>
     <Compile Include="Classes\CommonMethods.cs" />
     <Compile Include="Classes\Development\DevelopmentInformation.cs" />
+    <Compile Include="Classes\Drawing\RecentlyUsedList.cs" />
+    <Compile Include="Drawing\GraphicsUtilities.cs" />
     <Compile Include="Enumerations\Enumerations.cs" />
     <Compile Include="Classes\ExceptionHandler.cs" />
     <Compile Include="Classes\GlobalMethods.cs" />
@@ -77,8 +79,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="HtmlAgilityPack">
+      <Version>1.11.17</Version>
+    </PackageReference>
     <PackageReference Include="KryptonToolkitSuite5472">
-      <Version>5.472.2000</Version>
+      <Version>5.472.2098</Version>
     </PackageReference>
     <PackageReference Include="WindowsAPICodePack">
       <Version>1.1.0</Version>
@@ -100,4 +105,7 @@
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(TargetDir)*.*" "$(ProjectDir)..\..\..\..\Bin\Shared\Common\" /D /R /Y /S</PostBuildEvent>
+  </PropertyGroup>
 </Project>

@@ -32,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Extended Standard Controls">
+      <HintPath>..\Extended Standard Controls\obj\Debug\Extended Standard Controls.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -50,6 +53,8 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Classes\ColourHandler.cs" />
+    <Compile Include="Classes\ComboBox\ImageComboBoxItem.cs" />
+    <Compile Include="Classes\ComboBox\ImageComboCollection.cs" />
     <Compile Include="Classes\Drawing\DrawingMethods.cs" />
     <Compile Include="Classes\Drawing\ExtendedDrawing.cs" />
     <Compile Include="Classes\Drawing\FontMetrics.cs" />
@@ -57,6 +62,9 @@
     <Compile Include="Classes\Drawing\RoundedRectangleF.cs" />
     <Compile Include="Classes\Drawing\Utility.cs" />
     <Compile Include="Classes\Events\ExecuteProcessAsAdministratorEventArgs.cs" />
+    <Compile Include="Classes\KryptonMessageBoxAdvanced.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Classes\KryptonMessageBoxExtended.cs" />
     <Compile Include="Classes\PI.cs" />
     <Compile Include="Classes\Ribbon\RibbonMerger.cs" />
@@ -73,6 +81,10 @@
     <Compile Include="Components\Controls\CustomProgressBar.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Components\Controls\Dialog Buttons\KryptonCancelDialogButton.cs" />
+    <Compile Include="Components\Controls\Dialog Buttons\KryptonNODialogButton.cs" />
+    <Compile Include="Components\Controls\Dialog Buttons\KryptonOKDialogButton.cs" />
+    <Compile Include="Components\Controls\Dialog Buttons\KryptonYesDialogButton.cs" />
     <Compile Include="Components\Controls\EnhancedProgressBar.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -85,6 +97,7 @@
     <Compile Include="Components\Controls\KryptonGrid.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Components\Controls\KryptonImageComboBox.cs" />
     <Compile Include="Components\Controls\KryptonKnobControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -107,6 +120,18 @@
     </Compile>
     <Compile Include="Components\Controls\KryptonRichTextBoxExtended.cs" />
     <Compile Include="Components\Controls\KryptonSplitButton.cs" />
+    <Compile Include="Components\Controls\Typeface Controls\KryptonTypefaceExample.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\Controls\Typeface Controls\KryptonTypefaceList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\Controls\Typeface Controls\KryptonTypefaceSizeList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\Controls\Typeface Controls\KryptonTypefaceStyle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Components\Controls\Rounded Controls\KryptonRoundedButton.cs" />
     <Compile Include="Components\Controls\Rounded Controls\KryptonRoundedMaskedTextBox.cs" />
     <Compile Include="Components\Controls\Rounded Controls\KryptonRoundedRichTextBox.cs" />
@@ -116,6 +141,9 @@
     </Compile>
     <Compile Include="Components\Controls\KryptonUACElevatedButton.cs" />
     <Compile Include="Components\Controls\Rounded Controls\KryptonRoundedUACElevatedButton.cs" />
+    <Compile Include="Components\Controls\UI\KryptonMessageBoxExtendedTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Components\List View\ListViewColumnSorter.cs" />
     <Compile Include="Components\List View\ListViewItemComparer.cs" />
     <Compile Include="Components\List View\ListViewPrint.cs">
@@ -162,7 +190,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="KryptonToolkitSuite5472">
-      <Version>5.472.2000</Version>
+      <Version>5.472.2098</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
@@ -310,6 +338,13 @@
     <None Include="Resources\Arrow_Up.ico" />
     <None Include="Resources\Arrow_Down.ico" />
     <None Include="Resources\active_search.png" />
+    <None Include="Resources\Input_Box_Warning_64_x_58.png" />
+    <None Include="Resources\Input_Box_Stop_64_x_64.png" />
+    <None Include="Resources\Input_Box_Question_64_x_64.png" />
+    <None Include="Resources\Input_Box_Ok_64_x_64.png" />
+    <None Include="Resources\Input_Box_Information_64_x_64.png" />
+    <None Include="Resources\Input_Box_Hand_64_x_64.png" />
+    <None Include="Resources\Input_Box_Critical_64_x_64.png" />
     <Content Include="ToolboxBitmaps\CheckGroupBox.bmp" />
     <Content Include="ToolboxBitmaps\CircularProgressBar.bmp" />
     <Content Include="ToolboxBitmaps\CollapsibleGroupBox.bmp" />
@@ -340,6 +375,8 @@
     <Content Include="ToolboxBitmaps\MultiLabel.bmp" />
     <Content Include="ToolboxBitmaps\NavigateBar.bmp" />
     <Content Include="ToolboxBitmaps\None.bmp" />
+    <Content Include="ToolboxBitmaps\PropertyGridVersionOne.bmp" />
+    <Content Include="ToolboxBitmaps\PropertyGridVersionTwo.bmp" />
     <Content Include="ToolboxBitmaps\RadioGroupBox.bmp" />
     <Content Include="ToolboxBitmaps\SplitButton.bmp" />
     <Content Include="ToolboxBitmaps\TextBoxButton.bmp" />
@@ -347,8 +384,26 @@
     <Content Include="ToolboxBitmaps\UACButton.bmp" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Classes\KryptonMessageBoxAdvanced.resx">
+      <DependentUpon>KryptonMessageBoxAdvanced.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Components\Controls\KryptonKnobControlEnhanced.resx">
       <DependentUpon>KryptonKnobControlEnhanced.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Controls\Typeface Controls\KryptonTypefaceExample.resx">
+      <DependentUpon>KryptonTypefaceExample.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Controls\Typeface Controls\KryptonTypefaceList.resx">
+      <DependentUpon>KryptonTypefaceList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Controls\Typeface Controls\KryptonTypefaceSizeList.resx">
+      <DependentUpon>KryptonTypefaceSizeList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Controls\Typeface Controls\KryptonTypefaceStyle.resx">
+      <DependentUpon>KryptonTypefaceStyle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Controls\UI\KryptonMessageBoxExtendedTest.resx">
+      <DependentUpon>KryptonMessageBoxExtendedTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -359,4 +414,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(TargetDir)*.*" "$(ProjectDir)..\..\..\..\Bin\Individual Components\Extended Toolkit Core\" /D /R /Y /S</PostBuildEvent>
+  </PropertyGroup>
 </Project>
