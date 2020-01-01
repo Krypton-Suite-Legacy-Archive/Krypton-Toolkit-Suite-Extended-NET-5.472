@@ -82,11 +82,14 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="KryptonToolkitSuite5472">
-      <Version>5.472.2000</Version>
+      <Version>5.472.2098</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.manifest" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(TargetDir)*.*" "$(ProjectDir)..\..\..\..\Bin\Individual Components\Task Dialogs\" /D /R /Y /S</PostBuildEvent>
+  </PropertyGroup>
 </Project>

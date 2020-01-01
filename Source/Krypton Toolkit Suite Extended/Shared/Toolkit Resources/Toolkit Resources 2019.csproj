@@ -1204,5 +1204,23 @@
   <ItemGroup>
     <None Include="Resources\Folder_16_x_16.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InputBoxError.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InputBoxExclamation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InputBoxInformation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InputBoxQuestion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nic80x80.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(TargetDir)*.*" "$(ProjectDir)..\..\..\..\Bin\Shared\Toolkit Resources\" /D /R /Y /S</PostBuildEvent>
+  </PropertyGroup>
 </Project>

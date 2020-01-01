@@ -81,7 +81,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="KryptonToolkitSuite5472">
-      <Version>5.472.2000</Version>
+      <Version>5.472.2098</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
@@ -105,4 +105,7 @@
     <Content Include="ToolboxBitmaps\FloatableToolStrip.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(TargetDir)*.*" "$(ProjectDir)..\..\..\..\Bin\Individual Components\Floating Toolbars\" /D /R /Y /S</PostBuildEvent>
+  </PropertyGroup>
 </Project>
